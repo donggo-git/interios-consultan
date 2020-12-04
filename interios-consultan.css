@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #181719;
+    color: #ffffff;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    height: auto;
+    padding: 15px 0;
+    padding-top: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+    top: 0;
+    
+}
+header p{
+    margin: 20px 50px;
+    padding: 5px;
+    border: 1px solid #ffff;
+    cursor: pointer;
+    
+}
+.burger-nav{
+    display: none;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 20px;
+    right: 1vw;
+    z-index: 10;
+}
+.burger-nav span{
+    display: block;
+    width: 40px;
+    height: 2.5px;
+    background-color: #ffffff;
+    margin: 8px 0;
+    transition: all 0.8s;
+}
+nav{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 5%;
+    font-size: 18px;
+    transition: all 0.8s;
+}
+header ul{
+    display: flex;
+    list-style: none;
+}
+header ul li{
+    margin: 0 35px;
+    cursor: pointer;
+}
+main{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: space-around;
+}
+.main-content{
+    width: 410px;
+}
+.main-content h1{
+    font-weight: 100;
+    font-family: 'Lora', serif;
+    line-height: 20vh;
+    font-size: 48px;
+}
+.main-content p{
+    font-size: 20px;
+    font-weight: 100;
+}
+.main-content a{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20vh;
+}
+.main-image{
+    background-image: url(./interior-consultant-master/photo1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-width: 50vw;
+    height: 60vh;
+}
+.designer-card{
+    position: absolute;
+    bottom: -20%;
+    background-color:  #181719;
+    right: 8%;
+    width:  25vw;
+    opacity: 0;
+    transform: translateY(40px);
+    animation-name: appearance;
+    animation-duration: 0.8s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+   
+}
+i{
+    animation-name: appearance-right;
+    animation-duration: 0.8s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateX(-5px);
+}
+@keyframes appearance-right{
+    100%{
+        opacity: 1;
+        transform: translateX(5px); 
+    }
+}
+@keyframes appearance{
+    100%{
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+.designer-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.designer-info img{
+    margin: 15px 25px;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+.name{
+    font-size: 14px;
+}
+.position{
+    margin-top: -5px;
+    font-size: 12px;
+    color: #828282;
+}
+h2{
+    margin-top: -2px;
+    font-size: 20px;
+    width: 70%;
+    margin-left: 30px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #A9A9A9;
+    ;
+}
+@media(max-width:1000px){
+    body{
+        padding: 0;
+    }
+    header nav{
+        height: 100vh;
+        width: 100vw;
+        background-color: #181719;
+        z-index: 100;
+        position: fixed;
+        transform: translateX(120%);
+    }
+    .burger-nav{
+        display: inline-block;
+        z-index: 101;
+        position: fixed;
+    }
+    header p{
+        border: 2px solid #fff;
+        min-width: 12.5vw;
+        max-height: 32px;
+        
+    }
+    main{
+        margin-top: 20%;
+        flex-direction: column;
+        justify-self: center;
+    }
+    .main-content{
+        margin-left: 50px;
+        width: 70vw;
+        
+    }
+    .main-content h1{
+        width: auto;
+        font-size: 80px;
+        line-height: 10vh;
+    }
+    .main-content p{
+        font-size: 2rem;
+        width: 90%;
+    }
+    .main-content a{
+        line-height: 5vh;
+        font-size: 2rem;
+    }
+    .main-image{
+        margin-top: 10%;
+        align-self: center;
+        width: calc(100vw - 100px);
+        height: 30vh;
+    }
+    .designer-card{
+        width: 50vw;
+        height: 10vh;
+    }
+    .designer-card h2{
+        font-size: 2rem;
+    }
+    .name, .position{
+        line-height: 2rem;
+        font-size: 1.2rem;
+    }
+    footer{
+        font-size: 1.5rem;
+        border-top: 1.5px solid#A9A9A9;
+        padding: 10px 50px;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        text-align: center;
+        font-size: 2rem;
+        margin: 50px 0;
+    }
+}
